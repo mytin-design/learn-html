@@ -1,0 +1,16 @@
+button {
+    margin-top: 30px;
+    background-color: gold;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    border: solid 1px black;
+    filter: grayscale(80%);
+}
+
+a {
+    background-color: lightgray;
+    padding: 10px;
+    border: solid 1px black;
+    filter: opacity(50%);
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Environmental stuff</title>
+        <meta charset="utf-8">
+        <link href="wendy-dile-1.css">
+        <style>
+            html {
+                padding: 0;
+                margin: 0;
+            }
+
+            body > .second-ppt {
+                margin: 0 auto;
+            }
+
+            .second-ppt {
+                display: flex;
+                flex-flow: column;
+                padding: 28px;
+                width: 35%;
+                border: .1px solid rgba(224,124,114,.1);
+            }
+
+            .second-ppt > p {
+                align-self: flex-start;
+            }
+
+            .env-heading {
+                color: #a1e9ec;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            ul li:before {
+                content: "\2022"; /*Add content: \2022 is the CSS code /unicode for a bullet */
+                color: #a1e9ec; /*change color */
+                font-weight: bold; /*If you want them bold */
+                display: inline-block; /* needed to add space between the bullet and the text */
+                width: 1em; /*Also nedded for space (tweak if needed)*/
+                margin-left: -1em; /*Also needed for space (tweak if needed) */
+            }
+
+            .env-factors-img {
+                display: flex;
+            }
+            .env-factors-img > img {
+                margin-top: 48px;
+                width: 150px;
+                height: 100px;
+            }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="second-ppt">
+            <div class="env-heading"><h2>Factors Affecting the Environment</h2></div>
+        <div class="env-para"><ul><li>Florence Nightingale wrote about environmental<br> factors that needed to be controlled more than a<br> century ago.</li></ul></div>
+        <div class="env-factors-img">
+            <ul>
+                <li>Ventilation and humidity</li>
+                <li>Lighting</li>
+                <li>Odour control</li>
+                <li>Noise</li>
+                <li>Interior design</li>
+                <li>Neatness</li>
+                <li>Privacy</li>
+            </ul>
+            <img src="../../../blog10.jpg" alt="an image i have no idea" title="An image about hospital stuff">
+        </div>
+
+        <p>Foot-notes about environmental stuff.</p>
+        </div>
+
+    </body>
+</html>

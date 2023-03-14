@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://www.w3schools.com">
+    <title>Relative and Absolute File paths</title>
+</head>
+<body>
+    <!--A file path describes the location of a file in a web site's folder structure
+    
+    File paths are used when linking to external files, like:
+
+Web pages, images, stylesheets, javascripts
+
+
+-->
+
+
+<!--Using Absolute Paths
+
+This is the full Uniform Resorce Locator URL to a file-->
+
+<img src="https://www.w3schools.com/images/picture.jpg"  alt="Mountain">
+
+
+<!--Relative File Paths 
+
+The file path points to a file relative to the current page
+
+Relative means in proportion to, or respective
+
+
+In the example below, the file path points to a file in the images folder located at the root of the current we:-->
+
+<img src="/images/picture.jpg"  alt="Mountain">
+
+
+<!--In the following example, Note the difference in the beginning forward slash
+
+the file path points to a file in the images folder located in the current folder-->
+
+<img src="images/picture.jpg" alt="Mountain">
+
+
+<!--In the following example, the file path points to a file in the images folder located in the folder one level
+
+up from the current folder-->
+
+<img src="../images/picture.jpg" alt="Mountain">
+
+<!--BEST pRACTICE-->
+
+<p>When using relative file paths, your web pages will not be bound to your current base URL. All links will work on your own computer (localhost) as well as on your current public domain and your future public domains.</p>
+</body>
+</html>

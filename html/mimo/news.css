@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    filter: blur(10px);
+}
+
+p {
+    font-size: 9px;
+    filter: blur(10px);
+}

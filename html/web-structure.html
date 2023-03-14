@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+
+        </style>
+        <meta charset="utf-8">
+
+        <title>My page title</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="web-structure.css">
+
+        <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer -->
+        <!--[if lt IE 9]-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <!--[endif]-->
+    </head>
+    <body>
+        <!--Here is our main header that is used across all the pages of our website-->
+
+        <header>
+            <h1>Header</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">OUR TEAM</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <!-- a searcg form is another common linear way to navigate through through a website-->
+
+            <form>
+                <input type="search" name="q" placeholder="Search query">
+                <input type="submit" value="Go!">
+            </form>
+
+        </nav>
+
+            <!-- Here is our page's main content-->
+
+            <main>
+                <!--It contains an article-->
+
+                <article>
+                    <h2>Article heading</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque, voluptate beatae aut quae nam, totam ullam commodi fugit officia repellendus. Blanditiis, iste dicta. Qui deserunt error deleniti debitis inventore.</p>
+                    <h3>
+                        Subsection
+                    </h3>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non at mollitia quis tempora vel quam veniam veritatis optio cupiditate corrupti aspernatur incidunt saepe iste, voluptatibus ea doloribus, id dolor debitis.</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nihil odit cum quos minima voluptatem consectetur commodi eaque corporis suscipit consequatur labore aspernatur, libero enim vero veniam neque doloremque quod!</p>
+
+                    <h3>Another subsection</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quis, quibusdam laborum ipsa excepturi rerum nobis id labore voluptates velit reiciendis libero eaque recusandae a deleniti quo et aliquam sunt.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, earum! Accusantium voluptates porro reiciendis? Earum necessitatibus, id sunt sapiente aliquid autem obcaecati impedit consequuntur quos fugiat odio est iste nisi?</p>
+
+                    <!--  The use of div -- Imagine a shopping cart widget that you could choose to pull up at any time during your time on an e-commerce site-->
+
+                    <div class="shopping-cart">
+                        <h2>Shopping cart</h2>
+                        <ul>
+                            <li>
+                                <p><a href="#"><strong>Silver earings</strong></a>: $99.95.</p>
+                                <img src="../products/3333-0985/thumb.png" alt="Silver earings">
+                            </li>
+                            <li>
+                                ...
+                            </li>
+                        </ul>
+                        <p>Total cost: $237.89</p>
+                    </div> 
+                </article>
+
+                <!--the aside content can also be nested within the main content-->
+
+                <aside>
+                    <h2>Related</h2>
+
+                    <ul>
+                        <li><a href="#">Oh I do no like to be beside the seaside</a></li>
+                        <li><a href="#">Oh i like the beaches</a></li>
+                        <li><a href="#">Although in the North of England</a></li>
+                        <li><a href="#">It never stops raining</a></li>
+                        <li><a href="#">But I love rain!</a></li>
+                    </ul>
+                </aside>
+            </main>
+
+            <!-- And here is our main footer that is used accross all the pages of our website-->
+
+            <footer>
+                <p>@Copyright 2021 by someone. All rights reserved.</p>
+            </footer>
+
+    </body>
+</html>

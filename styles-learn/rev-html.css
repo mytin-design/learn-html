@@ -1,0 +1,372 @@
+html {
+    padding: 0;
+    margin: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-rows: 1fr 900px 1fr;
+    padding: 10px;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    padding: 28px;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 20px;
+    background-image: linear-gradient(43deg, rgb(189, 183, 183), #fff);
+}
+
+main {
+    grid-area: main;
+
+}
+
+footer {
+    grid-area: footer;
+    border-radius: 10px;
+
+}
+
+.c-main {
+    display: grid;
+    padding: 10px;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "aside main-content main-content bside"
+    "aside main-content main-content bside"
+    "aside main-content main-content bside";
+}
+
+.a-side {
+    grid-area: aside;
+    padding: 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(23deg, gray, white);
+}
+
+.main-content {
+    grid-area: main-content;
+    padding: 10px;
+    background-image: linear-gradient(23deg, gray, white);
+    overflow-y: scroll;
+
+}
+
+
+.b-side {
+    grid-area: bside;
+    background-image: linear-gradient(23deg, gray, white);
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+#logo-touch{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.logo {
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    overflow: hidden;
+    background-image: linear-gradient(23deg, navy, teal);
+    align-self: flex-start;
+}
+
+
+.navwrapper>.nav-list-1 {
+    list-style-type: none;
+    display: grid;
+    justify-items: space-around;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 50px;
+}
+.navwrapper ul li:hover {
+    background-image: linear-gradient(23deg, navy, teal);
+    cursor: pointer;
+}
+
+.navwrapper>ul>li {
+
+    height: 35px;
+    width: 150px;
+    border: 1px solid teal;
+    padding-top: 10px;
+}
+
+.navwrapper>.nav-list-2 {
+    display: grid;
+    list-style-type: none;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(2, auto);
+    justify-items: center;
+}
+
+
+.nav-list-1 > li {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+
+
+}
+
+.nav-list-1 > li:hover {
+    background-image: linear-gradient(23deg, navy, teal);
+    cursor: pointer;
+}
+.nav-list-2 > li {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+
+
+}
+
+.nav-list-2 > li:hover {
+    background-image: linear-gradient(23deg, navy, teal);
+    cursor: pointer;
+}
+
+
+.log-set-up > li {
+    height: 35px;
+    width: 70px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.log-set-up > li:hover {
+    background-image: linear-gradient(23deg, navy, teal);
+}
+
+
+.log-set-up {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-items: space-around;
+    list-style-type: none;
+}
+
+
+/* changes the design of the content, b & a-side class section so that the article is in another scrollable box;*/
+
+.article-1 {
+    border-radius: 10px;
+    padding: 10px;
+    height: 50%;
+    width: 80%;
+    overflow-y: scroll;
+    box-shadow: 8px 8px 15px 8px rgb(228, 224, 224);
+}
+
+
+.cat-music {
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 200px;
+    width: 80%;
+    padding: 10px;
+    overflow-y: scroll;
+    background-image: linear-gradient(23deg, rgb(214, 205, 205), white);
+}
+
+.vid-style {
+    list-style-type: none;
+}
+
+
+
+
+#ca-mice {
+    border-radius: 20px;
+    padding: 18px;
+    border: 2px solid whitesmoke;
+    box-shadow: 8px 8px 15px 8px rgb(228, 224, 224);
+}
+
+/* use as deemed fit
+.feel-tag {
+    border-radius: 20px;
+    padding: 8px;
+    border: 2px solid whitesmoke;
+    box-shadow: 8px 8px 15px 8px #fff;
+}
+*/
+.mice-box-form {
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px 8px rgb(228, 224, 224);
+
+    padding: 10px;
+    height: 300px;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mice-box-form input {
+    border-radius: 10px;
+    border: none;
+    border-bottom: 2px solid navy;
+    background: transparent;
+    padding: 20px;
+    text-align: center;
+}
+
+#feelings {
+    text-transform: uppercase;
+}
+
+#feelings:hover {
+    background-color: rgb(192, 185, 185);
+    cursor: pointer;
+}
+.advert-image {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-clip: border-box;
+    width: 100px;
+    height: 50px;
+}
+
+#advert-image-1 {
+    width: 250px;
+    height: 150px;
+}
+
+.advert-intro-tag {
+    border-radius: 20px;
+    padding: 8px;
+    border: 2px solid whitesmoke;
+    box-shadow: 8px 8px 15px 8px rgb(228, 224, 224);
+}
+#advert-image-2 {
+    width: 250px;
+    height: 150px;
+}
+#advert-image-3 {
+    width: 250px;
+    height: 150px;
+}
+#advert-image-4 {
+    width: 250px;
+    height: 150px;
+}
+#advert-image-5 {
+    width: 250px;
+    height: 150px;
+}
+.advert-box {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 20px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    padding: 10px;
+    height: 300px;
+    width: 80%;
+}
+
+footer {
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+    background-image: linear-gradient(23deg, rgb(202, 195, 195), #fff);
+    grid-auto-rows: 200px;
+    grid-template-areas: 
+    "side-a middle-foo side-b"
+    "side-a middle-foo side-b"
+    "c-right c-right c-right";
+}
+
+.side-a {
+    grid-area: side-a;
+    cursor: pointer;
+    grid-row: 300px;
+    background-image: url('../../control.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+
+
+.middle-foo {
+    grid-area: middle-foo;
+    grid-row: 300px;
+    cursor: pointer;
+    background-image: url('../../cute08.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+/*.middle-foo input{
+    border: 1px solid navy;
+    padding: 15px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+
+.middle-foo:hover {
+    background-image: linear-gradient(23deg, navy, teal);
+}*/
+
+.side-b {
+    grid-area: side-b;
+    cursor: pointer;
+    background-image: url('../../cute24.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+
+
+.c-right {
+    grid-area: c-right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-sec > input {
+    padding: 10px;
+    border: 1px solid navy;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.share-sec > input:hover {
+    background-image: linear-gradient(23deg, navy, teal);
+    cursor: pointer;
+}

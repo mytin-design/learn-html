@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Html page</title>
+    <script src="https://cdn.rawgit.com/lingtalfi/simpledrag/master/simpledrag.js"></script>
+    <style>
+        body {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #eee;
+        }
+
+        .ui {
+            display: flex;
+        }
+
+        .ui > div {
+            margin: 0 10px;
+        }
+
+        .ui .controls input {
+            vertical-align: middle;
+        }
+
+        #circle1, #circle2 {
+            cursor: pointer;
+        }
+
+        svg {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+<div class="ui">
+    <div class="controls">
+        Radius X: <input id="rx" type="range" min="0" max="500"/><br>
+        Radius Y: <input id="ry" type="range" min="0" max="500"/><br>
+        Rotation: <input id="rot" type="range" min="0" max="360" value="0"/><br>
+        Large arc flag: <input id="laf" type="checkbox"/><br>
+        Sweep flag: <input id="sf" type="checkbox"/><br>
+        Arc command: <span id="arcvalue"></span><br>
+    </div>
+    <div class="results">
+        mouse: pageX <span id="pagex"></span>, <span pageY id="pagey"></span><br>
+        A: <span id="axvalue"></span>, <span id="ayvalue"></span><br>
+        B: <span id="bxvalue"></span>, <span id="byvalue"></span><br>
+        m: <span id="mvalue"></span><br>
+        b(A): <span id="bavalue"></span><br>
+        b(B): <span id="bbvalue"></span><br>
+        contextWidth: <span id="cwvalue"></span><br>
+
+    </div>
+</div>
+
+<svg width="100%" height="100%" id="svgcontext">
+
+    <path id="arc2" d=""
+          fill="none" stroke="green" stroke-width="2"
+    ></path>
+    <path id="arc3" d=""
+          fill="none" stroke="green" stroke-width="2"
+    ></path>
+    <path id="arc4" d=""
+          fill="none" stroke="green" stroke-width="2"
+    ></path>
+
+    <path id="arc" d="M100 100 A 100 100 0 1 0 200 100"
+          fill="none" stroke="red" stroke-width="4"
+    ></path>
+
+    <line id="line0" x1="0" y1="0" x2="0" y2="0" fill="none" stroke="black" stroke-width="2"></line>
+    <line id="line" x1="0" y1="0" x2="0" y2="0" fill="none" stroke="black" stroke-width="2"></line>
+    <line id="line2" x1="0" y1="0" x2="0" y2="0" fill="none" stroke="black" stroke-width="2"></line>
+
+    <circle id="circle1" cx="100" cy="100" r="5"
+            fill="red"
+            stroke="red"
+            stroke-width="2"
+    ></circle>
+
+    <circle id="circle2" cx="200" cy="100" r="5"
+            fill="red"
+            stroke="red"
+            stroke-width="2"
+    ></circle>
+
+
+</svg>
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+    var svgContext = document.getElementById('svgcontext');
+    var rect = svgContext.getBoundingClientRect(); // helper to enclose mouse coordinates into svg box
+
+
+    var pagexEl = document.getElementById('pagex');
+    var pageyEl = document.getElementById('pagey');
+    var mEl = document.getElementById('mvalue');
+    var rxEl = document.getElementById('rx');
+    var ryEl = document.getElementById('ry');
+    var rotEl = document.getElementById('rot');
+    var lafEl = document.getElementById('laf');
+    var sfEl = document.getElementById('sf');
+    var axEl = document.getElementById('axvalue');
+    var ayEl = document.getElementById('ayvalue');
+    var bxEl = document.getElementById('bxvalue');
+    var byEl = document.getElementById('byvalue');
+    var baEl = document.getElementById('bavalue');
+    var bbEl = document.getElementById('bbvalue');
+    var circle1 = document.getElementById('circle1');
+    var circle2 = document.getElementById('circle2');
+    var line = document.getElementById('line');
+    var line0 = document.getElementById('line0');
+    var line2 = document.getElementById('line2');
+    var cwEl = document.getElementById('cwvalue');
+    var arcCmdEl = document.getElementById('arcvalue');
+    var arcEl = document.getElementById('arc');
+    var arc2El = document.getElementById('arc2');
+    var arc3El = document.getElementById('arc3');
+    var arc4El = document.getElementById('arc4');
+
+
+    function updatePaths(pageX, pageY) {
+
+        pagexEl.textContent = pageX;
+        pageyEl.textContent = pageY;
+
+
+//        cwEl.textContent = pageY;
+
+
+        // line between two points
+        line.setAttribute("x1", circle1.getAttribute('cx'));
+        line.setAttribute("y1", circle1.getAttribute('cy'));
+        line.setAttribute("x2", circle2.getAttribute('cx'));
+        line.setAttribute("y2", circle2.getAttribute('cy'));
+
+
+        axEl.textContent = circle1.getAttribute('cx');
+        ayEl.textContent = circle1.getAttribute('cy');
+        bxEl.textContent = circle2.getAttribute('cx');
+        byEl.textContent = circle2.getAttribute('cy');
+
+
+        // y = mx + b
+        var m, b, run; // m = rise/run = (y2-y1) / (x2-x1)
+        if (circle1.getAttribute('cx') <= circle2.getAttribute('cx')) {
+            run = (circle2.getAttribute('cx') - circle1.getAttribute('cx'));
+            if (0 !== run) {
+                m = (circle2.getAttribute('cy') - circle1.getAttribute('cy')) / run;
+            }
+        }
+        else {
+            run = (circle1.getAttribute('cx') - circle2.getAttribute('cx'));
+            if (0 !== run) {
+                m = (circle1.getAttribute('cy') - circle2.getAttribute('cy')) / run;
+            }
+        }
+
+        if (0 !== run) {
+            // b = y - mx
+            b = circle1.getAttribute('cy') - m * circle1.getAttribute('cx');
+            b2 = circle2.getAttribute('cy') - m * circle2.getAttribute('cx');
+            baEl.textContent = b;
+            bbEl.textContent = b2;
+            mEl.textContent = m;
+
+            // draw segment from the left vertical axis (x=0) to the left most point (A or B).
+            // x=0 ----> y = b
+            var leftMost, rightMost;
+            if (circle1.getAttribute('cx') <= circle2.getAttribute('cx')) {
+                leftMost = circle1;
+                rightMost = circle2;
+            }
+            else {
+                leftMost = circle2;
+                rightMost = circle1;
+            }
+
+
+            line0.setAttribute("x1", 0);
+            line0.setAttribute("y1", b);
+            line0.setAttribute("x2", leftMost.getAttribute('cx'));
+            line0.setAttribute("y2", leftMost.getAttribute('cy'));
+
+            // draw segment from point B to the right vertical axis (x=rect.width) representing the end of the svg box.
+            // y = mx + b
+            var y = m * rect.width + b;
+            line2.setAttribute("x1", rightMost.getAttribute('cx'));
+            line2.setAttribute("y1", rightMost.getAttribute('cy'));
+            line2.setAttribute("x2", rect.width);
+            line2.setAttribute("y2", y);
+
+            // now update the arc
+            var arcCmd = getArcCommand(leftMost, rightMost, lafEl.checked, sfEl.checked);
+            arcCmdEl.textContent = arcCmd;
+            arcEl.setAttribute('d', arcCmd);
+
+            // now update the other helper arcs
+            var combo = [
+                [true, true],
+                [true, false],
+                [false, true],
+                [false, false],
+            ].filter(function (item) {
+                if (item[0] === lafEl.checked && item[1] === sfEl.checked) {
+                    return false;
+                }
+                return true;
+            });
+            arc2El.setAttribute('d', getArcCommand(leftMost, rightMost, combo[0][0], combo[0][1]));
+            arc3El.setAttribute('d', getArcCommand(leftMost, rightMost, combo[1][0], combo[1][1]));
+            arc4El.setAttribute('d', getArcCommand(leftMost, rightMost, combo[2][0], combo[2][1]));
+
+
+        }
+    }
+
+    function getArcCommand(leftMost, rightMost, lafChecked, sfChecked) {
+        return "M" + leftMost.getAttribute('cx') + " " + leftMost.getAttribute('cy')
+                + " A " + rxEl.value + " " + ryEl.value + " " + rotEl.value + " "
+                + (true === lafChecked ? "1" : "0") + " " + (true === sfChecked ? "1" : "0")
+                + " " + rightMost.getAttribute('cx') + " " + rightMost.getAttribute('cy');
+    }
+
+    function updateScreen() {
+        rect = svgContext.getBoundingClientRect();
+        cwEl.textContent = rect.width;
+    }
+
+
+    circle1.sdrag(function (el, pageX, startX, pageY, startY) {
+
+        pageX -= rect.left;
+        pageY -= rect.top;
+
+        el.setAttribute('cx', pageX);
+        el.setAttribute('cy', pageY);
+        updatePaths(pageX, pageY);
+    });
+
+    circle2.sdrag(function (el, pageX, startX, pageY, startY) {
+
+        pageX -= rect.left;
+        pageY -= rect.top;
+
+        el.setAttribute('cx', pageX);
+        el.setAttribute('cy', pageY);
+        updatePaths(pageX, pageY);
+    });
+
+    window.addEventListener('resize', updateScreen);
+
+
+    // sliders
+    ['rx', 'ry', 'rot'].forEach(function (id) {
+        document.getElementById(id).addEventListener('input', function (e) {
+            updatePaths();
+        });
+    });
+
+    // checkboxes
+    ['laf', 'sf'].forEach(function (id) {
+        document.getElementById(id).addEventListener('change', function (e) {
+            updatePaths();
+        });
+    });
+
+
+    updatePaths();
+    updateScreen();
+
+
+</script>
+</body>
+</html>

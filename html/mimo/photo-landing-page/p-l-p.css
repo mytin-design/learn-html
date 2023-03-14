@@ -1,0 +1,16 @@
+body {
+    background-color: linen;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    padding:75px 0 75px 0;
+    background: linear-gradient(45deg, pink, purple, darkBlue);
+    border: solid 10px white;
+    border-radius: 50px; 
+}
+
+img {
+    width: 150px;padding: 10px; background: linear-gradient(225deg, pink, purple, darkBlue);border-radius: 20px;
+}

@@ -1,0 +1,40 @@
+h3 {
+    background: linear-gradient(90deg, beige, lightBlue, teal);
+    padding: 50px;
+    text-align:center;
+    color: white;
+}
+
+button {
+    background: linear-gradient(135deg, lightBlue, skyBlue, powderBlue, steelBlue);
+    background: linear-gradient(azure, chocolate);
+    padding: 50px;
+    border-radius: 10px;
+}
+body {
+    text-align: center;
+}
+/*
+p {
+    background: linear-gradient(45deg, lightSalmon, khaki, honeydew);
+    padding: 75px;
+    font-size: large;
+}*/
+/*
+p {
+    background: linear-gradient(deepSkyBlue, white);
+    padding: 50px;
+    text-align: center;
+}
+*/
+
+p {
+    background: linear-gradient(90deg, black, beige, azure);
+    width: 300px;
+    height: 150px;
+}
+h2 {
+    background: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+    padding: 100px;
+    color: white;
+}

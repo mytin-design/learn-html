@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    
+    display: grid;
+    text-align: center;
+    grid-template-areas: 
+    "top top"
+    "left right"
+    "left right"
+    "left right";
+}
+
+div {
+    border: 1px solid black;
+    
+}
+
+.top {
+    grid-area: top;
+    background-color: rgba(192, 17, 11, 0.884);
+    color: white;
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.right {
+    grid-area: right;
+    font-size: 2.3rem;
+
+    background-color: darkorange;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+
+
+
+}
+
+.left {
+    grid-area: left;
+    background-color: darkorange;
+
+    font-size: 2.3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+

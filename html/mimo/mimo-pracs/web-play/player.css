@@ -1,0 +1,14 @@
+img { /* inline elements*/
+    width: 50px;
+    height: 50px;
+}
+
+body {
+    background-color: azure;
+}
+
+div {
+    text-align: center; /* Notice we can center elements using text-align - centers images */
+    background-color: lightCyan;
+    padding: 15px;
+}

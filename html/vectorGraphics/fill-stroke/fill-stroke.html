@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, user-scalable=no">
+        <link rel="stylesheet" href="fill-stroke.css">
+    </head>
+    <body class="container">
+
+        <!--Using inline styles for svg nodes-->
+        <?xml version="1,0" standalone="no"?>
+        <svg version="1.1" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <rect x="100" y="10" widht="180" height="180" stroke= "blue" fill= """/>
+        </svg>
+
+        <svg width="200" height="200">
+            <rect x="10" y="10" width="100" height="100" stroke="#00f" stroke-width="20" fill="purple" fill-opacity=".5" stroke-opacity=".8"/>
+        </svg>
+
+        <!--Using stroke-linejoin-->
+        <?xml version="1.0" standalone="no"?>
+        <svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <polyline points="40 60 80 20 120 60" stroke="#000" stroke-width="20" stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
+
+            <polyline points="40 140 80 100 120 140" stroke="#000" stroke-width="20" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+
+            <polyline points="40 220 80 180 120 220" stroke="#000" stroke-width="20" stroke-linecap="square" fill="none" stroke-linejoin="bevel"/>
+        </svg>
+
+        <?xml version="1.0" standalone="no"?>
+        <svg width="460" height="440" xmnls="http://www.w3.org/2000/svg" version="1.1">
+            <line x1="40" x2="120" y1="20" y2="20" stroke="rgba(0,0,0,0.2)" stroke-width="20" stroke-linecap="butt"/>
+            <line x1="40" x2="120" y1="60" y2="60" stroke="#000" stroke-width="20" stroke-linecap="square"/>
+            <line x1="40" x2="120" y1="100" y2="100" stroke="#000" stroke-width="20" stroke-linecap="round"/>
+            <rect x="200" y="200" width="70" height="70" fill="none" stroke="#fed" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+
+
+        <!--Using the stroke-dasharray-->
+        <?xml version="1.0" standalone="no"?>
+        <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="#000" stroke-linecap="round" stroke-dasharray="5, 10, 5" fill="none"/>
+
+            <path d="M 10 75 L 190 75" stroke="#f00" stroke-linecap="round" stroke-dasharray="5, 5" fill="none"/>
+        </svg>
+
+        <!--Using inline styles for svg nodes-->
+        <?xml version="1,0" standalone="no"?>
+        <svg version="1.1" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <rect x="100" y="10" widht="180" height="180" stroke= "blue" fill= "none""/>
+        </svg>
+    </body>
+</html>

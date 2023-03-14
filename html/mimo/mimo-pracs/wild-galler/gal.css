@@ -1,0 +1,30 @@
+html {
+    background: #eee;
+    padding: 20px;
+
+}
+
+body {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+}
+
+.item-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-item {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+

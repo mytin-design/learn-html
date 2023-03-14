@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+h5 {
+    color: gray;
+    margin: 0px 0px 0px 30px;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+div {
+    border-radius: 10px;
+    background-color: lightBlue;
+    padding: 10px;
+    margin: 20px;
+}

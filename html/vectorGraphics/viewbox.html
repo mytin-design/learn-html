@@ -1,0 +1,203 @@
+<html>
+    <head>
+        
+        <style>
+            .example {
+                border: 2px solid red;
+                width: 200px;
+                height: 300px;
+            }
+
+            .another {
+                width: 380px;
+                height: 630px;
+                border: 4px solid gold;
+                border-radius: 30px;
+                background-color: rgb(241, 237, 237);
+                FILTER: DROP-SHADOW(0 5PX 18PX rgb(211, 188, 188));
+                
+                
+            }
+            
+
+            #path {
+                border: 1px solid #ef4;
+            }
+
+            .inner-icon {
+                fill: hsl(184, 7%, 46%);
+                filter: drop-shadow(0 3px 10px rgba(197, 169, 124, 0.904));
+            }
+
+            .inner-icon:hover {
+                filter: drop-shadow(0 8px 14px hsl(56, 94%, 65%));
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+         <!--svg viewBox-->
+
+         <svg class="example" viewBox=" 0 0 300 300" > <!-- The first two numbers are usually 0 0 , almost all the time - whereas the viewport is the size of the size of the viewable area, the viewBox controls what is inside the  viewable area  --><!-- Remember this is the viewport - specified using width and height - infact we can completely remove the properties and put them in css -  as shown-->
+            <circle r="150" cx="150" cy="150" />
+        </svg>
+
+
+        <hr>
+
+        <!--Iphone 6 concept-->
+        <svg class="another" >
+            <circle r="3" cx="190" cy="10"/>
+            <rect width="10" height="10" x="130" y="22" rx="15" ry="15" stroke/>
+            <rect width="80" height="10" x="150" y="22" rx="5" ry="5"/>
+            <rect class="inner" width="350" height="500" x="15" y="45" rx="" ry="" fill="hsl(10, 15%, 34%)" stroke="#000" stroke-width="1"/>
+
+            <rect width="60" height="60" x="40" y="85" rx="10" fill="rgba(15, 06, 7,0.73)"/>
+            <rect width="60" height="60" x="120" y="85" rx="10" fill="rgba(15, 06, 7,0.73)"/>
+            <rect width="60" height="60" x="200" y="85" rx="10" fill="rgba(15, 06, 7,0.73)"/>
+            <rect width="60" height="60" x="280" y="85" rx="10" fill="rgba(15, 06, 7,0.73)"/>
+
+            <rect width="60" height="60" x="40" y="215" rx="10" fill="rgba(15, 06, 7,0.73)"/>
+            <rect width="60" height="60" x="120" y="215" rx="10" fill="rgba(15, 06, 7,0.73)"/>
+            <rect width="60" height="60" x="200" y="215" rx="10" fill="rgba(15, 06, 7,0.73)"/>
+            <rect width="60" height="60" x="280" y="215" rx="10" fill="rgba(15, 06, 7,0.73)"/>
+
+            <rect width="60" height="60" x="40" y="335" rx="10" fill="rgba(15, 406, 97,0.73)"/>
+            <rect width="60" height="60" x="120" y="335" rx="10" fill="rgba(15, 406, 97,0.73)"/>
+            <rect width="60" height="60" x="200" y="335" rx="10" fill="rgba(15, 406, 97,0.73)"/>
+            <rect width="60" height="60" x="280" y="335" rx="10" fill="rgba(15, 406, 97,0.73)"/>
+
+            <rect width="60" height="60" x="40" y="435" rx="10" fill="rgba(15, 406, 97,0.73)"/>
+            <rect width="60" height="60" x="120" y="435" rx="10" fill="rgba(15, 406, 97,0.73)"/>
+            <rect width="60" height="60" x="200" y="435" rx="10" fill="rgba(15, 406, 97,0.73)"/>
+            <rect width="60" height="60" x="280" y="435" rx="10" fill="rgba(15, 406, 97,0.73)"/>
+
+            <circle r="20" cx="70" cy="115" class="inner-icon" stroke="none" />
+            <circle r="20" cx="150" cy="115" class="inner-icon" stroke="none" />
+            <circle r="20" cx="230" cy="115" class="inner-icon" stroke="none" />
+            <circle r="20" cx="310" cy="115" class="inner-icon" stroke="none" />
+
+            <circle r="20" cx="70" cy="245" class="inner-icon" stroke="none" />
+            <circle r="20" cx="150" cy="245" class="inner-icon" stroke="none" />
+            <circle r="20" cx="230" cy="245" class="inner-icon" stroke="none" />
+            <circle r="20" cx="310" cy="245" class="inner-icon" stroke="none" />
+
+            <image href="hero-mobile.jpg" width="90" height="90"/>
+
+
+
+
+
+            <circle r="30" cx="185" cy="590" stroke="gold" fill="none" stroke-width="2"/>
+        </svg>
+
+        <hr>
+
+        <svg id="path" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10"/>
+
+        <!--Points-->
+
+        <circle cx="10" cy="10" r="2" fill="red"/>
+        </svg>
+
+
+        <!--The path element - has commands such as M (X Y), l(dx dy), H(x) v(dy)-->
+
+        <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+            <!--<path d="M 10 10 H 90 V 90 H 10 L 10 10 "/> --Draws a square-->
+            <path d="M10 10 H90 V90 H10 Z"/>
+            <!--We can replace the Line to command with the Z command, specifying thst the line goes form current position to start-->
+            <!--Points specified at the corner of the square-->
+            <circle cx="10" cy="10" r="2" fill="red"/>
+            <circle cx="90" cy="90" r="2" fill="red"/>
+            <circle cx="90" cy="10" r="2" fill="red"/>
+            <circle cx="10" cy="90" r="2" fill="red"/>
+
+        </svg>
+
+
+        <HR>
+    <!-- An illustration of curve commands "C" - use dto define control points for a cubic bezier curve-->
+
+    <!-- Note that for every curve we have a minimum of 3 control points -  the M control point defines the start of the curve in relation to the x,y origin (0,0)-->
+            <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+
+                <path stroke="#000" d="M 10 10 C 20 20, 40 20, 50 10" fill="transparent"/>
+                <path stroke="#000" fill="transparent" d="M 70 10 C 70 20, 110 20, 110 10" />
+                <path d="M 130 10 C 120 20, 180 20, 170 10" stroke="#000" fill="transparent"/>
+                <path d="M 10 60 C 20 80, 40 80, 50 60" stroke="#000" fill="transparent"/>
+                <path d="M 70 60 C 70 80, 110 80, 110 60" stroke="#000" fill="transparent"/>
+                <path d="M 130 60 C 120 80, 180 80, 170 60" stroke="#000" fill="transparent"/>
+                <path d="M 10 110 C 20 140, 40 140, 50 110" stroke="#000" fill="transparent"/>
+                <path d="M 70 100 C 70 140, 110 140, 110 110" stroke="#000" fill="transparent"/>
+                <path d="M 130 110 C 120 140, 180 140, 170 110" stroke="#000" fill="transparent"/>
+            </svg>
+
+<!--Additional command "S" - used to define more or several cubic curves - we combine the "C" and "S" commands -->
+            <!--Note that to create multiple cubic curves we use three commands -  "M" and "S" in that order-->
+
+
+
+            <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 10 80 C 40 10, 65 10, 95 80  150 150, 180 80" stroke="#000" fill="transparent"/>
+            </svg>
+
+
+            <!--The quadratic curve control points as specified using the "Q" command for absolutr points and "q" for relative points-->
+
+            <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 10 80 Q 95 10 180 80" stroke="#000" fill="transparent"/>
+            </svg>
+
+            <!--We can specify a shorcut to create multiple quadratic curves using the "T" command - however we must have an initial "Q" command, tha t the "T" command uses as a reflection -->
+            <!--Note that to create multiple quadratic curves we use three commands -  "M" "Q" and "T" in that order-->
+
+            <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 10 80 Q 52.5 10, 95 80 T 180 80" stroke="#000" fill="transparent"/>
+            </svg>
+
+            <!--Arcs - desifned using the A command -  however uses several other commands such as "L", ""-->
+            <svg width="320" height="320" xmlnx="http://www.w3.org/2000/svg">
+                <path d="M 10 315
+                        L 110 215
+                        A 30 50 0 0 1 162.55 162.45
+                        L 172.55 152.45
+                        A 30 50 -45 0 1 215.1 109.9
+                        L 315 10" stroke="#000" fill="#0f0" stroke-width="2" fill-opacity="0.5"/>
+
+            </svg>
+
+            <hr>"
+            <svg xmlns="http://wwww.w3.org/2000/svg" width="320" height="320">
+                <path d="M10 315
+                L 110 215
+                A 36 60 0 0 1 150.71 170.29
+                L 172.55 152.45
+                A 30 50 -45 0 1 215.1 109.9
+                L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
+                <circle cx="150.71" cy="170.29" r="2" fill="red"/>
+                <circle cx="110" cy="215" r="2" fill="red"/>
+                <ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="#00f"/>
+                <ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="#00f"  />
+            </svg>
+
+
+            <hr size="20" width="500" color="hsl(123, 56%, 43%)">
+            <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 80 80
+                A 45 45, 0, 0, 0, 125 125
+                L 125 80 7" fill="green"/>
+                <path d="M 230 80
+                A 45 45, 0, 1, 0, 275 125
+                L 275 80 Z" fill="red"/>
+                <path d="M 80 230
+                A 45 45, 0, 0, 1, 125 125
+                L 125 230 Z" fill="purple"/>
+                <path d="M 230 230 
+                A 45 45, 0, 1, 1, 275 275
+                L 275 230 Z" fill="blue"/>
+            </svg>
+
+    </body>
+</html>

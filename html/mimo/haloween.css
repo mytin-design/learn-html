@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    font-family: monospace;
+}
+
+h2 {
+    filter: blur(1px);
+}
+
+img {
+    filter: grayscale(100%); /* turns image to black and white */
+    margin: 20px 0 20px 0;
+}
+
+a {
+    color: black;
+    background-color: lightGray;
+    filter: opacity(60%);
+}
+
+p {
+    background-color: lightgray;
+    filter: opacity(40%);
+}
+

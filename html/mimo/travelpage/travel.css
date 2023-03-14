@@ -1,0 +1,15 @@
+h3 {
+    height: 40px;
+    padding: 15px;
+    border-radius: 8px;
+    background: linear-gradient(aliceblue, white);
+}
+
+img {
+    height: 300px; padding: 20px; border-radius: 8px; background: linear-gradient(90deg,bisque, white, bisque);
+}
+
+body {
+    text-align: center;background: linear-gradient(45deg, lightBlue, snow, white);
+}
+

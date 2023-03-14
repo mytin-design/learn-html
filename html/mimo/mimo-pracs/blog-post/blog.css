@@ -1,0 +1,18 @@
+.blogPost {
+    background-color: snow;
+    padding: 10px;
+    margin: 10px;
+}
+
+.featuredPost {
+    border: 3px solid gold;
+}
+
+.blogTitle {
+    font-family: 'Arial';
+    font-size: 25px;
+}
+
+.featuredTtitle {
+    color: goldenrod;
+}

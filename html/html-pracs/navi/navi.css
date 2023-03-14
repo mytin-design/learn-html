@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+html {
+    background: url(./images/www-about-bg.png) center no-repeat;
+    background-attachment: scroll; 
+    background-size: cover;
+    height: 100vh;
+}
+
+.navi {
+    border: 1px solid;
+    padding: 10px 50px 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar > a:hover {
+    border-bottom: 2px solid blue;
+}
+
+.x-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videoGame {
+    width: 70%;
+    margin: 50% auto;
+}
+
+.game_text {
+    margin-top: 10%;
+    padding: 10px;
+    width: 50%;
+}
+.gaming-text {
+    margin-top: 10px;
+}

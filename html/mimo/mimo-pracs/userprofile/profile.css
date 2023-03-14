@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100px;
+}
+
+.title {
+    background-color: coral;
+
+}
+
+.navigation {
+    background-color: lightCoral;
+    color: white;
+}
+
+.content {
+    background-color: linen;
+    text-align: center;
+}
+
+div {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 12px; 
+}

@@ -1,0 +1,66 @@
+<!-- about family-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Family of Mwangi</title>
+        <meta charset="utf-8">
+        <meta name="description" content="about family of mwangi that has geniuses">
+        <link href="family.css" type="text/css">
+        <style>
+            html {
+                padding: 0;
+                margin: 0;
+                background-color: #ff80ff;
+            }
+
+            body {
+                margin: 0 auto;
+                padding: 1px;
+                display: grid;
+                grid-gap: 10px;
+                grid-template-rows: 200px 1000px 400px;
+                grid-template-areas: 
+                "header header header"
+                "aside main aside"
+                "footer footer footer";
+            }
+
+            header {
+                grid-area: header;
+                border: 1px solid black;
+                background-color: #ff80ff;
+                height: 200px;
+            }
+
+            main {
+                grid-area: main;
+                background-color: grey;
+                border: 1px solid black;
+            }
+            footer {
+                grid-area: footer;
+                border: 1px solid black;
+                background-color: #ff80ff;
+                
+            }
+            .aside h1 {
+                text-align: center;
+                font-family: 'Open Sans Condensed' sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <div class="aside">
+                <h1>About family</h1>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>    
+</html>

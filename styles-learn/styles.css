@@ -1,0 +1,12 @@
+html {
+    background: linear-gradient(32deg, #a22a23, #aaee44, #aa11aa);
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 20px 40px;
+
+    padding: 10px;
+    background: repeating-linear-gradient(32deg, #433434, #eddeed);
+}

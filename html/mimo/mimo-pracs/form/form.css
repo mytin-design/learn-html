@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+}
+
+h2, button {
+    font-family: 'Courier New';
+}
+
+input, button {
+    width: 70%;
+    margin: 10px;
+    padding: 5px;
+    outline: none;
+}
+
+#name, #email {
+    border: 2px solid coral;
+}

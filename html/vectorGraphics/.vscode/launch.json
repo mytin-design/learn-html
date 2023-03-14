@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach by Process ID",
+            "processId": "${command:PickProcess}",
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
+            "name": "Attach",
+            "port": 9229,
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
+            "type": "browse-lite",
+            "request": "attach",
+            "name": "Browse Lite: Attach"
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+            "type": "browse-lite",
+            "name": "Browse Lite: Attach",
+            "request": "attach"
+        },
+        {
+            "type": "browse-lite",
+            "request": "launch",
+            "name": "Browse Lite: Launch",
+            "url": "http://localhost:3000"
+        }
+    ]
+}

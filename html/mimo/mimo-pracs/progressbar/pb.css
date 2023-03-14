@@ -1,0 +1,25 @@
+div {
+    border: 2px solid black;
+    margin: 5px;
+}
+
+p {
+    height: 50px;
+    margin: 0;
+}
+
+.full {
+    background-color: green;
+    width: 100%;
+}
+
+
+.half {
+    background-color: orange;
+    width: 50%;
+}
+
+.low {
+    background-color: red;
+    width: 10%;
+}

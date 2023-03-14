@@ -1,0 +1,35 @@
+/*div {
+    border-block: black;
+    border-block-color: black;
+    writing-mode: horizontal-tb;
+}
+
+
+
+div {
+    border-block: dashed red;
+    writing-mode: vertical-rl;
+}
+
+
+
+div {
+    border-block: 1rem solid;
+    writing-mode: horizontal-tb;
+    direction: rtl;
+}
+
+
+
+div {
+    border-block: groove blue;
+    border-image: linear-gradient(red, green) 107;
+    border-block-width: 1rem;
+}
+
+*/
+
+div {
+    border: 1rem solid;
+    border-image: url(https://unsplash.com/photos/FbhuN53_330) 7;
+}

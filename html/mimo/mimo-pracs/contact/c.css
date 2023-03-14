@@ -1,0 +1,23 @@
+.grid-container {
+    display: grid;
+    grid-template: 1fr / 100%; /* grid-template is a shorthand property for grid-template rows and grid-template-columns respectively. Notice how we separate the first value from the seond using a forward slash */
+
+}
+
+.grid-item {
+    padding-left: 20px;
+    border-bottom: 1px solid lightgrey;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 { /* Notice that these styles are overriden by the bootstrap styles specified in the elements */
+    background-color: #6d3acf;
+    padding: 20px;
+    color: #ffffff;
+    margin: 0px;
+}

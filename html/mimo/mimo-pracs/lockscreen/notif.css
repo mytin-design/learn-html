@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: bisque;
+    text-align: center;
+    width: 360px;
+    margin: 10px auto;
+    
+}
+
+p {
+    border: 1px solid bisque;
+    margin: 0;
+    padding: 10px;
+}
+
+div {
+    background-color: whiteSmoke;
+    font-size: 14px;
+    text-align: left;
+}

@@ -1,0 +1,13 @@
+* {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    background: linear-gradient(23deg, skyblue, lightskyblue);
+    color: #000000;
+    font-size: 12px;
+    font-weight: 800;
+    font-family: "Sans serif";
+}

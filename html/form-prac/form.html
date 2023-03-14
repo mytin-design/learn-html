@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Personal data | practice form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="form.css" type="text/css">
+
+    </head>
+    <body>
+        <!--The form allows user to enter personal data-->
+
+        <form action="https://www.example.com" method="post" class="personalData" id="userData">
+            <input type="email" placeholder="Email" class="email" name="user email" id="email"><br><br>
+            <input type="password" placeholder="Password" class="passcode" name="user password" id="pass"><br><br>
+            <label for="bio">Write a short bio</label><br><br>
+            <textarea name="" placeholder="200 words" id="bio" cols="30" rows="10" class="bio"></textarea>
+            <p>Select gender:</p>
+            <input type="radio" id="male" name="male" class="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="female" class="female">
+            <label for="female">Female</label><br><br>
+            <p>Select areas of interest:</p>
+            <ol class="interests">
+                <li><input type="checkbox" name="Programming" class="programming" id="programming">    <label for="programming">Programming</label></li>
+                <li><input type="checkbox" name="Medicine" class="medicine" id="medicine">    <label for="Medicine">Medicine</label></li>
+                <li><input type="checkbox" name="Business" class="business" id="business">    <label for="Business">Business</label></li>
+            </ol>
+<br>
+<br>
+            <button type="submit" value="submit" id="submit-btn">SUBMIT</button>
+            
+            
+            
+
+
+
+        </form>
+    </body>
+</html>

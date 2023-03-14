@@ -1,0 +1,40 @@
+div {
+    height: 50px;
+    margin: 0 auto;
+}
+
+.red {
+    background-color: #ff0000;
+    width: 30px;
+}
+
+.orange {
+    background-color: #ffa500;
+    width: 60px;
+}
+
+.yellow {
+    background-color: #ffff00;
+    width: 90px;
+}
+
+.green {
+    background-color: #00ff00;
+    width: 120px;
+}
+
+.blue {
+    background-color: #0000ff;
+    width: 150px;
+}
+
+.indigo {
+    background-color: #4b0082;
+    width: 180px;
+}
+
+.violet {
+    background-color: #ee82ee;
+    width: 210px;
+}
+

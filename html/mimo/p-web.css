@@ -1,0 +1,14 @@
+img {
+    filter: brightness(80%) saturate(100%) contrast(150%); /* not it is saturate(), not saturation()  -makes the colors less or more vivid*/
+    width: 200px;
+    height: 300px;
+    padding: 50px;
+    border: solid 2px black;
+    background-color: white;
+}
+
+body {
+    text-align: center;
+    font-family: monospace;
+    background-color: beige;
+}

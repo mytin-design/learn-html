@@ -1,0 +1,36 @@
+h2 {
+    background: linear-gradient(90deg,beige, lightBlue, teal); /* left to right */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+p {
+    background: linear-gradient(45deg, orange, lightgreen,forestgreen);
+    padding: 75px;
+    color: white;
+    font-size: large;
+}
+
+h3 {
+    background: linear-gradient(darkgreen, black);
+    padding: 50px;
+    text-align: center;
+    color: white;
+}
+
+button {
+    background: linear-gradient(135deg, lightBlue, skyBlue, powderBlue, steelBlue);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+body {
+    text-align: center;
+}
+
+h4 {
+    background: linear-gradient(45deg, lightSalmon, khaki, honeydew);
+    padding: 75px;
+    font-size: large;
+}
+

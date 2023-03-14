@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+form {
+    margin: 20px auto;
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#c-pass {
+    margin-right: 69px;
+
+}
+
+label {
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+#password {
+    margin-right: 6px;
+}
+
+#username {
+    margin-right: 10px;
+}
+
+ #lastName {
+    margin-right: 11px;
+}
+
+#firstName {
+    margin-right: 10px;
+}
+
+#p-number {
+    margin-right: 3px;
+}
+
+#location {
+    margin-right: 2px;
+}
+
+#save, #reset {
+    padding: 5px;
+    width: 50px;
+    height: 23px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #aaa;
+    border: none;
+    gap: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

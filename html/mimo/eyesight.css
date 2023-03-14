@@ -1,0 +1,16 @@
+body {
+    background-color: beige;
+    text-align: center;
+}
+
+h3 {
+    filter: blur(4px);
+}
+
+h4 {
+    filter: blur(2px);
+}
+
+h5 {
+    filter: blur(1px);
+}

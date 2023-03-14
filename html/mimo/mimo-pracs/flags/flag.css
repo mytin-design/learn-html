@@ -1,0 +1,36 @@
+body {
+    background-color: #cccccc;
+    text-align: center;
+}
+
+p {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.red {
+    background-color: #ff0000;
+}
+
+.white {
+    background-color: #ffffff;
+
+}
+
+.green {
+    background-color: #00ff00;
+}
+
+
+.yellow {
+    background-color: #ffff00;
+}
+
+.blue {
+    background-color: #0000ff;
+}
+
+.black {
+    background-color: #000000;
+}

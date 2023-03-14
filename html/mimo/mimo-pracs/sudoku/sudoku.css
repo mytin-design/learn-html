@@ -1,0 +1,17 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7,40px);
+}
+
+.grid-item {
+    background-color: #d6eaf8;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #2980b9;
+    margin: 2px;
+}
+
+h2 {
+    color: #2980b9;
+}

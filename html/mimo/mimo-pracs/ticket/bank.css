@@ -1,0 +1,27 @@
+
+html {
+}
+body {
+    background-color: #ffffff;
+}
+
+.grid-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 5px; /* Notice the use of the gap short-hand property for row-gap and column-gap respectively */
+}
+
+.grid-item {
+    background-color: #1e96ff;
+    color: #ffffff;
+    padding: 15px;
+}
+
+h2 {
+    text-align: center;
+    color: #1e96ff;
+}
+
+button {
+    border: 1px solid #1e96ff;
+}

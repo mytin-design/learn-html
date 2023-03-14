@@ -1,0 +1,78 @@
+
+.mimo_bubble {
+    position: relative;
+    margin: 250px auto;
+    width: 11%;
+    border-radius: 100%;
+    display: flex;
+    flex-flow: column;
+    padding: 50px;
+    justify-content: space-around;
+    align-items: center;
+    animation-name: bounce;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+
+}
+
+@keyframes bounce {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 50px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+
+
+.bounce_head {
+    position: absolute;
+    top: 28%;
+    z-index: 1;
+    background: rgba(2, 6, 71, 0.925);
+    height: 50px;
+    width: 70px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left_eye, .right_eye {
+    background: cyan;
+    height: 15px;
+    width: 10px;
+    border-radius: 3px;
+}
+
+.face {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background: #eee;
+    filter: drop-shadow(0px 0px 2px #bbb);
+
+}
+
+.shadow {
+
+    position: absolute;
+    top: 53%;
+    left: 47%;
+    height: 50px;
+    width: 100px;
+    border-radius: 100%;
+    background-color: rgba(2, 0, 0, 0.062);
+    box-shadow: 0px 0px 12px rgba(15, 3, 3, 0.171);
+    transform: rotateX(120deg);
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabs.css">
+    <script src="tabs.js"></script>
+    </head>
+<body>
+    <!--Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects-->
+<!--Tabs links-->
+
+<div class="tab">
+    <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'London')">London</button>
+    <span onclick="this.parentElement.style.display = 'none'""></span>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+    <!--Tab content-->
+
+    <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital city of France.</p>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+<!-- ====Create buttons to open specific tab content. All <div> elements with class="tabcontent" are hidden by default (with css and js). When user clicks on a button, it will open the tabcontent that matches the button.
+    -->
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+.day {
+    background-color: bisque;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.weekend {
+    background-color: plum;
+    font-style: italic;
+}
+
+.today {
+    font-weight: bold;
+    border: 2px solid gray;
+}
+
+.past {
+    color: gray;
+    background-color: lightgray;
+}
+

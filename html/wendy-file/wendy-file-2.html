@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Temperature</title>
+        <meta charset="utf-8">
+        <link href="wendy-file-2.css" rel="stylesheet" type="text/css">
+        <style>
+            html {
+                padding: 0;
+                margin: 0;
+            }
+
+            :root {
+                --main-border-color: #a1e9ec;
+                --main-fore-color: #000;
+                --main-text-color: #000;
+                --main-back-color: #fff;
+            }
+
+            body > .temp {
+                margin: 0 auto;
+                display: flex;
+                padding: 20px;
+                flex-direction: column;
+                border-radius: 10px;
+                border: 1px solid var(--main-border-color);
+                width: 40%;
+            }
+            .temp > * {
+                border: var(--main-border-color);
+            }
+
+           .temp > .temp-container {
+                align-self: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #eaf58c;
+                background-clip: padding-box;
+                height: 35%;
+                width: 70%;
+                border-radius: 8px;
+                color: #a1e9ec;
+                font-size: 20px;
+            }
+            
+            /* change of bullet color - revisit*/
+           /* ul {
+                list-style-type: none;
+            }
+
+            ul  li:before {
+                content: "\2022";
+                display: inline-block;
+                margin-left: -1em;
+                width: 1em;
+                color: var(--main-border-color);
+            }*/
+
+            img {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+            }
+
+            .img-one {
+                top: 10%;
+                left: 60%;
+            }
+
+            .img-two {
+                top: 23%;
+                left: 60%;
+            }
+
+            .prefix-red {
+                color: #ff0000;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="temp">
+            <div class="temp-container"><p>Temperature</p></div>
+            <img class="img-one" src="../../../cute01.jpg" alt="an image about stuff" title="image about stuff">
+            <div class="temp-info">
+                <ul>
+                    <li><h3>Temperature</h3></li>
+                    <li><p><span class="prefix-red">Warm-</span>elderly and infants have poor/immature thermoregulation.</p></li>
+                    <li class="prefix-red">PYREXIA: FEVER</li>
+                </ul>
+            </div>
+            <img class="img-two" src="../../../abst4.jpg" alt="an image about stuff" title="image about stuff">
+            
+            <div class="cool-text"><P class="cool-para">Operating suites and Procudure areas are kept cool to<br> reduce bacteria counts and potential for infection.</P></div>
+        </div>
+    </body>
+</html>

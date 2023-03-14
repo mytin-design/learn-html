@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Images Emebeding</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="images-emebeding.css" type="text/css">
+        <stle>
+            html {
+                padding: 0;
+                margin: 0;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            body {
+                margin: 0 auto;
+            }
+
+            figure {
+                border: thin #c0c0c0 solid;
+                display: flex;
+                flex-flow: column;
+                padding: 5px;
+                max-width: 220px;
+                margin: auto;
+            }
+
+            img {
+                max-width: 220px;
+                max-height: 150px;
+            }
+
+            figcaption {
+                background-color: #222;
+                color: #fff;
+                font: italic smaller sans-serif;
+                padding: 3px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+        <figure class="turn-code-into-figure">
+            <figure>
+                <img src="../../blog10.jpg" alt="A dinosaur with a bid head and torso" width="400" height="341"
+                title="A T-Rex dinosaur of the mid epoc age">
+                <figcaption>A T-Rex from the mid epoc ages</figcaption>
+            </figure>
+        </figure>
+        -->
+            <hr>
+            <!--
+            <figure>
+                <img src="../../blog10.jpg" 
+                alt="Elephant at sunset">
+                <figcaption>An elephant at sunset</figcaption>
+            </figure>
+        -->
+
+            <figure>
+                <figurecaption>Get browser details using <code>navigator</code>.</figurecaption>
+                <pre>
+                    function NavigatorExample() {
+                        var txt;
+                        txt = "Browser CodeName:" + navigator.appCodeName + "; ";
+                        txt+ = "Browser Name: " + navigator.appName + "; ";
+                        txt+ = "Browser Version: " + navigator.appVersion + "; ";
+                        txt+ = "Cookies Enabled: " + navigator.cookieEnabled + "; ";
+                        txt+ = "Platform: " + navigator.platform + "; ";
+                        txt+ = "User-agent header: " + navigator.userAgent + "; ";
+                        console.log("NavigatorExample", txt); 
+                    }
+                </pre>
+            </figure>
+        
+            <figure>
+                <figcaption><cite>Edsger Dijkstra</cite></figcaption>
+                <blockquote>If debugging is the process of removing software bugs, then programming must be the process of putting them in.</blockquote>
+            </figure>
+
+    </body>
+</html>

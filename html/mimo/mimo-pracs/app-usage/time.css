@@ -1,0 +1,20 @@
+div {
+    font-size: 0;
+    border: 2px ridge gray;
+}
+
+.gaming {
+    width: 40%;
+    background-color: skyblue;
+}
+
+.wheat {
+    width: 35%;
+    background-color: wheat;
+}
+
+
+.music {
+    width: 25%;
+    background-color: pink;
+}

@@ -1,0 +1,13 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, ifr);
+}
+
+.grid-item {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: #2980b9;
+}

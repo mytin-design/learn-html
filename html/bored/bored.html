@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NavBAR</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bored.css">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: monospace;
+                font-size: 15px;
+            }
+            .navwrapper {
+                display: flex;
+                border: 1px solid;
+                justify-content: space-around;
+                align-items: center;
+                height: 120px;
+                padding: 15px;
+                /*background-image: repeating-linear-gradient(120deg, rgba(123, 173, 248, 0.6), rgba(202, 230, 247, 0.1));
+            }
+            
+
+            .logo_div {
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                transform: skewX(25deg);
+                filter: drop-shadow(2px 2px 8px );
+            }
+
+            .logo_name {
+                text-align: center;
+                border: 1px solid;
+                font-size: 1.6rem;
+            }
+
+            .logo_div:hover {
+                filter: blur(1px);
+                cursor: pointer;
+            }
+
+            .nav_links {
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 20px;
+                width: 60%;
+            }
+            #linker {
+                text-decoration: none;
+                font-size: 1.6rem;
+                transition: border-bottom 1s, color 1s, font-weight cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            }
+
+            #linker:hover {
+                border-bottom: 2px solid;
+                color: black;
+                font-weight: 600;
+            }
+            .search_book {
+                width: 25%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 50px;
+                padding: 10px;
+            }
+
+            #searchId {
+                border-radius: 20px;
+                padding: 5px;
+            }
+            #searchId[placeholder="games..."] {
+                color: #00f;
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+            #bookId {
+                height: 35px;
+                padding: 8px;
+                border: none;
+                font-weight: 600;
+                background-color: #eee;
+                border-radius:2px ;
+                text-transform: uppercase;
+                transition: background-color 1s;
+                
+            }
+
+            #bookId:hover {
+                background-color: rgb(12, 160, 44);
+                cursor: pointer;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navwrapper">
+            <div class="logo_div">
+                <h1 class="logo_name">NavBar</h1>
+            </div>
+            <div class="nav_links">
+                <a href="#" id="linker" target="_self">Home</a>
+                <a href="#" id="linker" target="_self">Parks</a>
+                <a href="#" id="linker" target="_self">Recreation</a>
+                <a href="#" id="linker" target="_self">Games</a>
+                <a href="#" id="linker" target="_self">Schedule</a>
+                <a href="#" id="linker" target="_self">Upcoming</a>
+
+            </div>
+            <div class="search_book">
+            <input type="search" id="searchId" name="searchId" value="" max="20" placeholder="games...">
+            <button id="bookId">Book Park</button>
+            </div>
+        </nav>
+        <main id="container"></main>
+    </body>
+</html>

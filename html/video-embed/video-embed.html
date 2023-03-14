@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Embedding</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="video-embed.css" type="text/css"> 
+        <style>
+            html {
+                background-color: #000;
+            }
+
+            video {
+                border-radius: 10px;
+                box-shadow: 8px 8px 15px 8px #a1e9ec;
+            }
+        </style>
+    </head>
+    <body>
+        <video src="R&M.mkv" poster="r&m-poster.jpg" controls title="Rick and Morty" width="500" height="400" >
+            <p>Your browser does not support HTML5 video, here is a <a href="https://www.youtube.com/embed/RfBHVdqkkVs">link to the video</a>instead.</p>
+        </video>
+
+    <video controls poster="prof-slater-poster.jpg" width="500" height="400">
+    <source src="prof-slater.mkv">
+        <p>Your browser does not support the specified file. You can check the <a href="prof-slater.mkv">link to the video</a>instead. </p>
+    </video>
+
+    <video controls poster="sevenYou-poster.jpg" autoplay width="500" height="400">
+        <source src="seven-you.mp4" title="Seven You" type="video/mp4">
+    </video>
+
+    <audio controls loop autoplay muted allow="autoplay">
+        <source src="linsey talk.3gpp">
+        <p>Fallback text</p>
+    </audio>
+    
+       <!--<video width="500" height="400" src="seven you.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></video>-->
+    </body>
+</html>

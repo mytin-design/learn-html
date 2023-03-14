@@ -1,0 +1,60 @@
+.grid {
+    margin: 50px auto;
+    width: 70%;
+    display: grid;
+    grid-template-areas: 
+    "orange orange red green"
+    "blue blue red green";
+}
+
+
+
+.orange {
+    grid-area: orange;
+    background-color: rgb(255, 123, 0);
+    height: 250px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.red {
+    grid-area: red;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* I noticed a feature of grid - where the container takes up the size of the content,
+
+what if we wanted to have fixed widths of containers */
+
+.green {
+    grid-area: green;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.blue {
+    grid-area: blue;
+    background-color: blue;
+    height: 150px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

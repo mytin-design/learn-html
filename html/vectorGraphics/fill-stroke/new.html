@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Styling svg</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, user-scalable=1.0">
+        <link >
+
+    </head>
+    <body>
+        
+        <!--Using inline styles for svg nodes-->
+        
+        <?xml version="1,0" standalone="no"?>
+        <svg version="1.1" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="30" width="180" height="180" style="stroke:chartreuse; fill:chocolate;" />
+        </svg>
+    
+
+        <?xml version="1.0" standalone="no"?>
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <style type="text/css">
+                    <![CDATA[
+                    #MyRect {
+                        stroke: black;
+                        fill:red;
+                    }
+
+                    #MyRect:hover {
+                        stroke: pink;
+                        stroke-width: 10;
+                        fill:blue;
+                    }
+                    ]]>
+                </style>
+            </defs>
+            <rect x="50" height="180" y="50" width="180" id="MyRect"/>
+        </svg>
+
+        <!--Using normal xml stylesheet syntax-->
+        <? xml version="1.0" standalone="no"?>
+        <? xml-styleheet type="text/css" href="fill-stroke.css"?>
+        <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <rect height="10" width="10" id="myrect"/>
+        </svg>
+    </body>
+
+</html>

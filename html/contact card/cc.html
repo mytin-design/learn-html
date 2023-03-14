@@ -1,0 +1,85 @@
+<!---======CONTACT CARD=====-->
+<!--==== DESIGN NEEDS=== 
+-NAME OF OWNER
+-SERVICE OR PRODUCT PROVIDING
+-CONTACTS -WHATSAPP, EMAIL, PHONE
+-SELF, OR COMPANY-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact card</title>
+        <link rel="icon" href="./../favicon.ico">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, suerscalable=no">
+        <link rel="stylesheet" href="cc.css">
+        <style>
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            html {
+                background: rgb(165, 236, 248);
+            }
+            .card {
+                margin: 100px auto;
+                outline-color: burlywood;
+                width: 400px;
+                border: none;
+                border-radius: 8px;
+                height: 200px;
+                background-color: rgb(15, 7, 58);
+                color: #fff;
+                padding: 20px;
+                font-family: monospace;
+                display: flex;
+                justify-content: space-around;
+                flex-flow: column;
+                align-items: center;
+                font-weight: 600;
+
+            }
+
+            .header {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                font-size: 1.1rem;
+            }
+
+            img {
+                height: 25px;
+                width: 25px;
+                border: 1px solid yellow;
+                border-radius: 50%;
+                background: #fff;
+            }
+
+            img[alt="UserAny"] {
+                display: none;
+            }
+
+            .contacts {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="header">
+                <img src="" alt="UserAny" class="userAny">
+                <h2 class="userName">King'ori Denis</h3>
+            </div>
+            <p class="skills">Web & Application Designer </p>
+            <div class="contacts">
+                <p class="phone">Phone: 0719444041</p>
+                <p class="whatsapp">WhatsApp: 0719444041</p>
+                <p class="email">Email: denismytin@gmail.com</p>
+            </div>
+            <p class="values">&rdquo;Above & Beyond&ldquo;</p>
+        </div>
+    </body>
+</html>

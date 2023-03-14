@@ -1,0 +1,72 @@
+<!-- ======LOCATE A BTAHROOM NEAR YOU ===-->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="bath.css">
+    <script src="bath.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        .title {
+            font-size: 5rem;
+            text-align: center;
+        }
+        .wrapper {
+            margin: 100px auto;
+            width: 60%;
+        }
+
+        .bathInfo {
+            border: 24px groove ;
+            padding: 20px;        
+        }
+
+        .boxer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            padding: 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .previous::before {
+            content: "<< ";
+        }
+
+        .next::after {
+            content: " >>";
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header class="title">Bathroom Finder</header>
+    <main class="wrapper">
+        <p class="accLoc">Based on your location:</p>
+        <div class="bathInfo">
+            <h2 class="bathName">Kasarani Privates</h2>
+            <figure class="bathStuff">
+                <p class="bathImager">We have clean bathrooms, ranging from as little as Ksh10. We provide you with tissues, sanitary pads (for females), clean treated water (drinking and handwashing). It is more like your home bathroom. They are cleaned and sterilized after every use by machines - an automatic procedure that occurs after every use. Need a shower too? <a id="showers"  href="">Check out Kasarani Private Showers</a></p>
+            </figure>
+        </div>
+
+        <div class="boxer">
+            <button class="previous">Previous</button>
+            <button class="checkout">Check Out</button>
+            <button class="next">Next</button>
+        </div>
+    </main>
+</body>
